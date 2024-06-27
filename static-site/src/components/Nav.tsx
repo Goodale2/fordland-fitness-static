@@ -67,9 +67,6 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
-            Sign In
-          </Button>
           <Button
             as={'a'}
             display={{ base: 'none', md: 'inline-flex' }}
@@ -77,11 +74,12 @@ export default function WithSubnavigation() {
             fontWeight={600}
             color={'white'}
             bg={'blue.400'}
-            href={'#'}
+            href={'https://app.glofox.com/portal/#/branch/6605733b391ca3534f100002/memberships'}
+            target='_blank'
             _hover={{
               bg: 'blue.300',
             }}>
-            Sign Up
+            Account Portal
           </Button>
         </Stack>
       </Flex>
@@ -261,7 +259,7 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Family',
         subLabel: 'Learn about our Family Plan option',
-        href: '#',
+        href: '/family_plan',
       },
     ],
   },

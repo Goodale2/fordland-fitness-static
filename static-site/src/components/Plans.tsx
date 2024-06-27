@@ -72,9 +72,9 @@ const PackageTier = ({ title, options, typePlan, href = "#", checked = false }: 
           </ListItem>
         ))}
       </List>
-      <Heading size={'lg'}>{typePlan}</Heading>
+      <Heading size={'md'}>{typePlan}</Heading>
       <Stack>
-        <Link href={href}>
+        <Link href={href} target='_blank'>
         <Button
           size="md"
           color={useColorModeValue(colorTextLight, colorTextDark)}
