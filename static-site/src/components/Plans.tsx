@@ -86,7 +86,7 @@ const PackageTier = ({ title, options, typePlan, href = "#", checked = false }: 
     </Stack>
   )
 }
-const ThreeTierPricingHorizontal = () => {
+const TierPricingHorizontal = () => {
   return (
     <Box py={6} px={5} width="full">
       <Stack spacing={4} width={'100%'} direction={'column'}>
@@ -122,16 +122,16 @@ const ThreeTierPricingHorizontal = () => {
           </Stack>
         </Stack>
         <Divider />
-        <PackageTier title={'Daily Plan'} typePlan="$5.00/Day" options={dailyOptions} />
+        <PackageTier title={'Daily Plan'} typePlan="$5.00/Day" options={dailyOptions} href='https://app.glofox.com/portal/#/branch/6605733b391ca3534f100002/memberships/661f17a076bbc112e70025c8/plan/1713313507165/buy'/>
         <Divider />
-        <PackageTier title={'Month to Month'} typePlan="$45.00/Month" options={monthlyOptions} />
+        <PackageTier title={'Month to Month'} typePlan="$45.00/Month" options={monthlyOptions} href='https://app.glofox.com/portal/#/branch/6605733b391ca3534f100002/memberships/661f2c5451e5e056650efe63/plan/1713313866581/buy'/>
         <Divider />
-        <PackageTier title={'6 Month Plan'} typePlan="$40.00/Month" options={sixMonthContractOptions} />
+        <PackageTier title={'6 Month Plan'} typePlan="$40.00/Month" options={sixMonthContractOptions} href='https://app.glofox.com/portal/#/branch/6605733b391ca3534f100002/memberships/661f2c5451e5e056650efe63/plan/1713404377801/buy'/>
         <Divider />
-        <PackageTier title={'12 Month Plan'} typePlan="$35.00/Month" options={yearLongContractOptions} />
+        <PackageTier title={'12 Month Plan'} typePlan="$35.00/Month" options={yearLongContractOptions} href='https://app.glofox.com/portal/#/branch/6605733b391ca3534f100002/memberships/661f2c5451e5e056650efe63/plan/1713404560188/buy'/>
       </Stack>
     </Box>
   )
 }
 
-export default ThreeTierPricingHorizontal;
+export default TierPricingHorizontal;

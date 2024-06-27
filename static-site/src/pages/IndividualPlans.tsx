@@ -1,9 +1,9 @@
 import React from 'react';
-import ThreeTierPricingHorizontal from '../components/Plans';
+import TierPricingHorizontal from '../components/Plans';
 
 const IndividualPlans: React.FC = () => (
   <>
-    {ThreeTierPricingHorizontal()}
+    {TierPricingHorizontal()}
   </>
 );
 
