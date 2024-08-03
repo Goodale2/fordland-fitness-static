@@ -8,6 +8,7 @@ import Waiver from './pages/Waiver';
 import Terms from './pages/TermsOfService';
 import ParentalWaiver from './pages/ParentalWaiver';
 import SMSTerms from './pages/SMSTerms';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/terms_of_service" element={<Terms/>} />
             <Route path="/parental_waiver" element={<ParentalWaiver/>} />
             <Route path="/sms_terms" element={<SMSTerms/>} />
+            <Route path="/contact" element={<Contact/>} />
           </Routes>
       </Layout>
     </Router>

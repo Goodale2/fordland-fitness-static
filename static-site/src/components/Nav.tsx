@@ -7,6 +7,7 @@ import {
   IconButton,
   Button,
   Stack,
+  Image,
   Collapse,
   Icon,
   Popover,
@@ -22,6 +23,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons'
+import logo from "../images/ff_logo_pi.png"
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
@@ -54,10 +56,16 @@ export default function WithSubnavigation() {
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}>
-            Logo
+            <Image
+            rounded={'md'}
+            alt={'fordland fitness logo'}
+            src={logo}
+            objectFit={'cover'}
+            maxW={"100px"}
+          />
           </Text>
 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          <Flex display={{ base: 'none', md: 'flex' }} ml={10} alignItems={"center"}>
             <DesktopNav />
           </Flex>
         </Flex>
@@ -106,7 +114,7 @@ const DesktopNav = () => {
                 as="a"
                 p={2}
                 href={navItem.href ?? '#'}
-                fontSize={'sm'}
+                fontSize={'md'}
                 fontWeight={500}
                 color={linkColor}
                 _hover={{
@@ -250,6 +258,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Plans',
+    href: '/individual_plans',
     children: [
       {
         label: 'Individual',

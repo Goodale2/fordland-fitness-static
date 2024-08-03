@@ -4,7 +4,7 @@ import { Heading, Link, Stack, Text } from '@chakra-ui/react';
 const FamilyPlans: React.FC = () => (
   <>
     <Stack gap={4}>
-    <Heading as="h1" size="2xl" mb={4}>
+    <Heading as="h1" size="lg" mb={4}>
       The Family Plan
     </Heading>
     <Text>
