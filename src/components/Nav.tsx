@@ -24,6 +24,7 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons'
 import logo from "../images/ff_logo_pi.png"
+import { Link } from 'react-router-dom'
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
@@ -110,10 +111,9 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
+              <Link to={navItem.href ?? '#'}>
               <Box
-                as="a"
                 p={2}
-                href={navItem.href ?? '#'}
                 fontSize={'md'}
                 fontWeight={500}
                 color={linkColor}
@@ -123,6 +123,7 @@ const DesktopNav = () => {
                 }}>
                 {navItem.label}
               </Box>
+              </Link>
             </PopoverTrigger>
 
             {navItem.children && (
@@ -149,9 +150,8 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
+    <Link to={href ?? '#'}>
     <Box
-      as="a"
-      href={href}
       role={'group'}
       display={'block'}
       p={2}
@@ -179,6 +179,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
         </Flex>
       </Stack>
     </Box>
+    </Link>
   )
 }
 
@@ -197,10 +198,9 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 
   return (
     <Stack spacing={4} onClick={children && onToggle} gap={0}>
+      <Link to={href ?? '#'}>
       <Box
         py={2}
-        as="a"
-        href={href ?? '#'}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
@@ -219,6 +219,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           />
         )}
       </Box>
+      </Link>
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
         <Stack
@@ -230,9 +231,11 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           align={'start'}>
           {children &&
             children.map((child) => (
-              <Box as="a" key={child.label} py={2} href={child.href}>
+              <Link to={child.href ?? '#'}>
+              <Box key={child.label} py={2}>
                 {child.label}
               </Box>
+              </Link>
             ))}
         </Stack>
       </Collapse>

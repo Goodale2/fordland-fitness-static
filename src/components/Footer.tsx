@@ -9,10 +9,10 @@ import {
   Text,
   VisuallyHidden,
   chakra,
-  useColorModeValue,
   Link,
+  useColorModeValue,
 } from '@chakra-ui/react'
-import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa'
+import { Link as RouterLink } from 'react-router-dom'
 
 // import { AppStoreBadge } from '#/components/AppStoreBadge'
 // import { PlayStoreBadge } from '#/components/PlayStoreBadge'
@@ -25,37 +25,6 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
   )
 }
 
-const SocialButton = ({
-  children,
-  label,
-  href,
-}: {
-  children: ReactNode
-  label: string
-  href: string
-}) => {
-  return (
-    <chakra.button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-      rounded={'full'}
-      w={8}
-      h={8}
-      cursor={'pointer'}
-      as={'a'}
-      href={href}
-      display={'inline-flex'}
-      alignItems={'center'}
-      justifyContent={'center'}
-      transition={'background 0.3s ease'}
-      _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-      }}>
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
-  )
-}
-
 export default function LargeWithAppLinksAndSocial() {
   return (
     <Box
@@ -65,38 +34,54 @@ export default function LargeWithAppLinksAndSocial() {
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>
-            <Box as="a" href={'/about'}>
+            <RouterLink to={'/about'}>
+            <Box>
               About Us
             </Box>
-            <Box as="a" href={'/contact'}>
+            </RouterLink>
+            <RouterLink to={'/contact'}>
+            <Box>
               Contact Us
             </Box>
+            </RouterLink>
           </Stack>
 
           <Stack align={'flex-start'}>
             <ListHeader>Support</ListHeader>
-            <Box as="a" href={'/contact'}>
+            <RouterLink to={'/contact'}>
+            <Box>
               Help Center
             </Box>
-            <Box as="a" href={'/terms_of_service'}>
+            </RouterLink>
+            <RouterLink to={'/terms_of_service'}>
+            <Box>
               Community Guidelines
             </Box>
+            </RouterLink>
           </Stack>
 
           <Stack align={'flex-start'}>
             <ListHeader>Legal</ListHeader>
-            <Box as="a" href={'/waiver'}>
+            <RouterLink to={'/waiver'}>
+            <Box>
               Waiver
             </Box>
-            <Box as="a" href={'/parental_waiver'}>
+            </RouterLink>
+            <RouterLink to={'/parental_waiver'}>
+            <Box>
               Parental Waiver
             </Box>
-            <Box as="a" href={'/terms_of_service'}>
+            </RouterLink>
+            <RouterLink to={'/terms_of_service'}>
+            <Box>
               Terms of Service
             </Box>
-            <Box as="a" href={'/sms_terms'}>
+            </RouterLink>
+            <RouterLink to={'/sms_terms'}>
+            <Box>
               SMS Terms and Conditions
             </Box>
+            </RouterLink>
           </Stack>
 
           <Stack align={'flex-start'}>
