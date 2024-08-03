@@ -2,7 +2,7 @@
   "name": "fordland-fitness-static-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Goodale2.github.io/fordland-fitness-static/static-site",
+  "homepage": "https://Goodale2.github.io/fordland-fitness-static",
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
