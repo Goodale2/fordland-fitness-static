@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/fordland-fitness-static/static/js/main.05114fd3.js",
+    "static/js/453.cd79fccd.chunk.js": "/fordland-fitness-static/static/js/453.cd79fccd.chunk.js",
+    "static/media/ff_logo_pi.png": "/fordland-fitness-static/static/media/ff_logo_pi.86542262549191eabc5d.png",
+    "index.html": "/fordland-fitness-static/index.html",
+    "main.05114fd3.js.map": "/fordland-fitness-static/static/js/main.05114fd3.js.map",
+    "453.cd79fccd.chunk.js.map": "/fordland-fitness-static/static/js/453.cd79fccd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.05114fd3.js"
+  ]
+}
