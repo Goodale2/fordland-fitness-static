@@ -1,11 +1,12 @@
 import React from 'react';
 import { Flex, Box, Heading, Text, Image, Divider } from '@chakra-ui/react';
+import building from "../images/signal-2024-08-07-183849.jpeg";
 
 const About: React.FC = () => (
   <Box maxW="1200px" mx="auto" px={4} py={10}>
     <Flex flexDirection="column" alignItems="center" gap={6} marginBottom="4em">
       <Image
-        src="path/to/fitness_center_image.jpg"
+        src={building}
         alt="Fordland Fitness Center"
         borderRadius="lg"
         boxShadow="md"

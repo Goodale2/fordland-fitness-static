@@ -36,6 +36,12 @@ const yearLongContractOptions = [
     {id: 4, desc: 'Best Value'}
 ]
 
+const teacherPlan = [
+  {id: 1, desc: 'Contract Secured'},
+  {id: 2, desc: 'Auto Renewal'},
+  {id: 3, desc: 'Just for Teachers'}
+]
+
 interface PackageTierProps {
   title: string
   options: Array<{ id: number; desc: string }>
@@ -63,7 +69,7 @@ const PackageTier = ({ title, options, typePlan, href = "#", checked = false }: 
         md: 'row',
       }}
       alignItems={{ md: 'center' }}>
-      <Heading size={'md'}>{title}</Heading>
+      <Heading size={'md'} maxW={"170px"}>{title}</Heading>
       <List spacing={3} textAlign="start">
         {options.map((desc, id) => (
           <ListItem key={desc.id}>
@@ -129,6 +135,8 @@ const TierPricingHorizontal = () => {
         <PackageTier title={'6 Month Plan'} typePlan="$40.00/Month" options={sixMonthContractOptions} href='https://app.glofox.com/portal/#/branch/6605733b391ca3534f100002/memberships/661f2c5451e5e056650efe63/plan/1713404377801/buy'/>
         <Divider />
         <PackageTier title={'12 Month Plan'} typePlan="$35.00/Month" options={yearLongContractOptions} href='https://app.glofox.com/portal/#/branch/6605733b391ca3534f100002/memberships/661f2c5451e5e056650efe63/plan/1713404560188/buy'/>
+        <Divider/>
+        <PackageTier title='Teacher Appreciation Plan' typePlan='$30.00/Month' options={teacherPlan} href='https://app.glofox.com/portal/#/branch/6605733b391ca3534f100002/memberships/661f2c5451e5e056650efe63/plan/1723931601893/buy'/>
       </Stack>
     </Box>
   )

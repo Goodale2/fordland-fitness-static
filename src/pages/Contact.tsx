@@ -4,27 +4,15 @@ import React from 'react';
       Flex,
       Box,
       Heading,
-      IconButton,
       Button,
       VStack,
-      HStack,
-      Wrap,
-      WrapItem,
-      FormControl,
-      FormLabel,
-      Input,
-      InputGroup,
-      InputLeftElement,
-      Textarea,
-      Link,
-      Text
+      Link
     } from '@chakra-ui/react'
     import {
       MdPhone,
       MdEmail,
       MdLocationOn
     } from 'react-icons/md'
-    import { BsPerson } from 'react-icons/bs'
 
 const Contact: React.FC = () => (
     <>
@@ -89,7 +77,7 @@ const Contact: React.FC = () => (
                       </Heading>
                       <Box>
                         <VStack pl={0} spacing={3} alignItems="flex-start">
-                          <Link href='tel:417-306-1914'>
+                          <Link href='tel:417-894-3533'>
                           <Button
                             size="md"
                             height="48px"
@@ -99,7 +87,7 @@ const Contact: React.FC = () => (
                             _hover={{ border: '2px solid #1C6FEB' }}
                             justifyContent={"flex-start"}
                             leftIcon={<MdPhone color="#1970F1" size="20px" />}>
-                            Jayse Stack: 417-306-1914
+                            Jayse Stack: 417-894-3533
                           </Button>
                           </Link>
                           <Link href='tel:573-220-4166'>
