@@ -2,7 +2,7 @@
   "name": "fordland-fitness-static-site",
   "version": "0.1.1",
   "private": true,
-  "homepage": "https://fordlandfitness.com",
+  "homepage": "https://fordlandfitness.com/",
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
