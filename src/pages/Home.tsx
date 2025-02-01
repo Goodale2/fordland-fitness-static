@@ -29,7 +29,9 @@ const Home: React.FC = () => (
       At Fordland Fitness, we believe in the power of community and the importance of supporting our neighbors. We are dedicated to providing a space where everyone can improve their health and happiness with the convenience of modern amenities and a hometown feel.
     </Text>
 
-    <Box my="10">
+    {/* 2025-02-01 -- This is being removed due to the playback being disabled on the website...
+    We will be replacing it with a caresol
+     <Box my="10">
       <div style={{width: '100%'}}>
         <iframe 
           width="100%" 
@@ -40,7 +42,7 @@ const Home: React.FC = () => (
           src="https://www.youtube.com/embed/videoseries?list=PLuDY3UCfvoJ-fQVYf6yt_PLkH611wMXQP">
         </iframe>
       </div>
-    </Box>
+    </Box> */}
 
     <Divider/>
 
