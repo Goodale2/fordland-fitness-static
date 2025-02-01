@@ -12,7 +12,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <Router basename="/fordland-fitness-static">
+    <Router basename="/">
       <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
